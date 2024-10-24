@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <% if (isLoggedIn) { %>
+            <a href="/profile">Profile</a>
+            <a href="/logout">Logout</a>
+        <% } else { %>
+            <a href="/login">Login</a>
+        <% } %>
+    </nav>
+
+    <h1>Welcome!</h1>
+
+    <% if (isLoggedIn) { %>
+        <p>Welcome back, user!</p>
+    <% } else { %>
+        <p>Please log in to access your profile.</p>
+    <% } %>
+</body>
+</html>

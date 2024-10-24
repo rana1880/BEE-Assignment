@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Results</title>
+</head>
+<body>
+  <h1>Results for "<%= query %>"</h1>
+  <ul>
+    <% if (results.length > 0) { %>
+      <% results.forEach(result => { %>
+        <li><%= result.name %> (<%= result.type %>)</li>
+      <% }) %>
+    <% } else { %>
+      <li>No results found</li>
+    <% } %>
+  </ul>
+  <a href="/searchform">Back to Search</a>
+</body>
+</html>
